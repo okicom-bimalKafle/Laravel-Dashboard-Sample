@@ -9,14 +9,26 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link href="{{asset('assets/css/admin.min.js')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/admin.min.css')}}" rel="stylesheet">
 
     
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+  
 </head>
 <body>
 
 
+@include('layouts.Shared_Resource._top_navbar')
+@include('layouts.Shared_Resource._side_navbar')
+<div id="content">
+    <main>
+        @yield('content')
+    </main>
+    @include('layouts.Shared_Resource._footer')
+</div>
+
+<script src="{{asset('assets/js/admin.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
 </body>
 </html>
