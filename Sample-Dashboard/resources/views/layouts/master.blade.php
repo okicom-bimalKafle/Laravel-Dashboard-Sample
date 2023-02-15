@@ -15,17 +15,25 @@
   
 </head>
 <body>
-
-
-@include('layouts.Shared_Resource._top_navbar')
+<div id="wrapper">
 @include('layouts.Shared_Resource._side_navbar')
-<div id="content">
-    <main>
-        @yield('content')
-    </main>
-    @include('layouts.Shared_Resource._footer')
-</div>
 
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+            @include('layouts.Shared_Resource._top_navbar')
+                
+                    <main>
+                        @yield('content')
+                    </main>
+                    
+               
+            </div>
+            @include('layouts.Shared_Resource._footer')
+        </div>
+</div>
 <script src="{{asset('assets/js/admin.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
