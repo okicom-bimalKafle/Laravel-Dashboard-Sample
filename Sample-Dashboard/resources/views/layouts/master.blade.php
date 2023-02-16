@@ -7,10 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <title>@yield('title')</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/css/admin.min.css')}}" rel="stylesheet">
-
+    
     
   
 </head>
@@ -34,8 +34,9 @@
             @include('layouts.Shared_Resource._footer')
         </div>
 </div>
-<script src="{{asset('assets/js/admin.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.js')}}"></script>
+<script src="{{asset('assets/js/admin.min.js')}}"></script>
+
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
 </body>
